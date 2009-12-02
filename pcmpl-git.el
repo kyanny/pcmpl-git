@@ -46,10 +46,9 @@
 (defun pcomplete/git ()
   "Completion rules for the `git' command."
   (let ((pcomplete-help "(git)Invoking Git"))
-    (pcompe
     (pcomplete-here (pcmpl-git-commands))
     (cond (t
-           (while (pcomplete-here (pcmpl-git-commands))))))))
+           (while (pcomplete-here (pcmpl-git-commands)))))))
 
 (defun pcmpl-git-commands ()
   "Return a list of available Git commands."
